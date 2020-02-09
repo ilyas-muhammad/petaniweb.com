@@ -26,6 +26,9 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
+      - rm -r ../node_modules
+      - rm ../yarn.lock
+
       - run: yarn install
 
       - save_cache:
